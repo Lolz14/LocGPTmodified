@@ -47,7 +47,7 @@ DOCUMENT_MAP = {
     ".md": TextLoader,
     ".py": TextLoader,
     # ".pdf": PDFMinerLoader,
-    ".pdf": UnstructuredFileLoader,
+    ".pdf": UnstructuredPDFLoader,
     ".csv": CSVLoader,
     ".xls": UnstructuredExcelLoader,
     ".xlsx": UnstructuredExcelLoader,
