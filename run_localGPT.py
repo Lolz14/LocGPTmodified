@@ -234,7 +234,7 @@ def main(device_type, show_sources, use_history, model_type):
     if not os.path.exists(MODELS_PATH):
         os.mkdir(MODELS_PATH)
 
-    qa = retrieval_qa_pipline(device_type, use_history, promptTemplate_type=model_type)
+    qa = retrieval_qa_pipline(device_type, True, promptTemplate_type=model_type)
     # Interactive questions and answers
     while True:
         query = input("\nEnter a query: ")
