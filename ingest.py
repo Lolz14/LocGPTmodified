@@ -136,7 +136,7 @@ def main(device_type):
         language=Language.PYTHON, chunk_size=880, chunk_overlap=200
     )
     texts = text_splitter.split_documents(text_documents)
-    texts += get_context_from_news()
+    #texts += get_context_from_news()
     texts.extend(python_splitter.split_documents(python_documents))
     logging.info(f"Loaded {len(documents)} documents from {SOURCE_DIRECTORY}")
     logging.info(f"Split into {len(texts)} chunks of text")
