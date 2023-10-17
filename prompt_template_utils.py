@@ -9,8 +9,8 @@ from langchain.prompts import PromptTemplate
 
 # this is specific to Llama-2.
 
-system_prompt = """You are a helpful assistant, you will use the provided context to answer user questions. Keep in mind that the user works in a financial institution, so he expects a great degree of detail.
-Read the given context before answering questions, think step by step and support your reasoning with quantitative reasoning if possible. If you can not answer a user question based on 
+system_prompt = """"You are a helpful assistant, you will use the provided context to answer user questions.
+Read the given context before answering questions and think step by step. If you can not answer a user question based on 
 the provided context, inform the user. Do not use any other information for answering user. Provide a detailed answer to the question."""
 
 
