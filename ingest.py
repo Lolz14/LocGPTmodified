@@ -1,5 +1,6 @@
 import logging
 import os
+import json
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
 import click
@@ -18,6 +19,15 @@ from constants import (
     SOURCE_DIRECTORY,
 )
 
+def get_context_from_news():
+    with open("SOURCE_DOCUMENTS/news_article.json", "r") as file:
+        dataset = json.load(file) # should be a list of dictionaries with keys "title", "date", "publisher", "text"
+        context = ""
+    for news in dataset:
+        # Quality of this merge must be definately improved
+        context += "\n+++++++++++++++++++++++++++++++++++\n" + news["text"]
+    return context
+    
 
 def load_single_document(file_path: str) -> Document:
     # Loads a single document from a file path
@@ -126,6 +136,7 @@ def main(device_type):
         language=Language.PYTHON, chunk_size=880, chunk_overlap=200
     )
     texts = text_splitter.split_documents(text_documents)
+    texts += get_context_from_news()
     texts.extend(python_splitter.split_documents(python_documents))
     logging.info(f"Loaded {len(documents)} documents from {SOURCE_DIRECTORY}")
     logging.info(f"Split into {len(texts)} chunks of text")
