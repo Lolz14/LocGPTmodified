@@ -171,8 +171,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Ac
 ####
 #### (FOR GGML) (Quantized cpu+gpu+mps) models - check if they support llama.cpp
 ####
-# MODEL_ID = "TheBloke/zephyr-7B-alpha-GGUF"
-# MODEL_BASENAME = "zephyr-7b-alpha.Q4_K_M.gguf"
-MODEL_ID = "TheBloke/SciPhi-Self-RAG-Mistral-7B-32k-GGUF"
-MODEL_BASENAME = "sciphi-self-rag-mistral-7b-32k.Q4_K_M.gguf"
+MODEL_ID = "TheBloke/zephyr-7B-alpha-GGUF"
+MODEL_BASENAME = "zephyr-7b-alpha.Q4_K_M.gguf"
+# MODEL_ID = "TheBloke/SciPhi-Self-RAG-Mistral-7B-32k-GGUF"
+# MODEL_BASENAME = "sciphi-self-rag-mistral-7b-32k.Q4_K_M.gguf"
 
