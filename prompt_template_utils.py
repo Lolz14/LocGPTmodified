@@ -60,7 +60,7 @@ def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, h
     else:
         # change this based on the model you have selected.
         if history:
-            prompt_template = (""### System:""+
+            prompt_template = ("### System:"+
                 system_prompt
                 + """
     
@@ -70,7 +70,7 @@ def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, h
             )
             prompt = PromptTemplate(input_variables=["history", "context", "question"], template=prompt_template)
         else:
-            prompt_template = (""### System:""+
+            prompt_template = ("### System:"+
                 system_prompt
                 + """
             
