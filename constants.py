@@ -62,8 +62,8 @@ DOCUMENT_MAP = {
 ####
 #### OTHER EMBEDDING MODEL OPTIONS
 ####
-
-EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate of all models)
+EMBEDDING_MODEL_NAME = "jinaai/jina-embeddings-v2-base-en"
+# EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate of all models)
 # EMBEDDING_MODEL_NAME = "intfloat/e5-large-v2" # Uses 1.5 GB of VRAM (A little less accurate than instructor-large)
 # EMBEDDING_MODEL_NAME = "intfloat/e5-base-v2" # Uses 0.5 GB of VRAM (A good model for lower VRAM GPUs)
 # EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2" # Uses 0.2 GB of VRAM (Less accurate but fastest - only requires 150mb of vram)
@@ -171,11 +171,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 ####
 #### (FOR GGML) (Quantized cpu+gpu+mps) models - check if they support llama.cpp
 ####
-MODEL_ID = "TheBloke/zephyr-7B-alpha-GGUF"
-MODEL_BASENAME = "zephyr-7b-alpha.Q4_K_M.gguf"
-# MODEL_ID = "TheBloke/wizard-vicuna-13B-GGML"
-# MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q4_0.bin"
-# MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q6_K.bin"
-# MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q2_K.bin"
-# MODEL_ID = "TheBloke/orca_mini_3B-GGML"
-# MODEL_BASENAME = "orca-mini-3b.ggmlv3.q4_0.bin"
+# MODEL_ID = "TheBloke/zephyr-7B-alpha-GGUF"
+# MODEL_BASENAME = "zephyr-7b-alpha.Q4_K_M.gguf"
+MODEL_ID = "TheBloke/SciPhi-Self-RAG-Mistral-7B-32k-GGUF"
+MODEL_BASENAME = "sciphi-self-rag-mistral-7b-32k.Q4_K_M.gguf"
+
