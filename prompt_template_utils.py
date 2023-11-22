@@ -66,6 +66,7 @@ def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, h
     
             Context: {history} \n {context}
             User: {question})
+            Answer:""")
             prompt = PromptTemplate(input_variables=["history", "context", "question"], template=prompt_template)
         else:
             prompt_template = (
@@ -73,8 +74,9 @@ def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, h
                 + """
             
             Context: {context}
-            User: {question}"""
-            )
+            User: {question}
+            Answer:""")
+            
             prompt = PromptTemplate(input_variables=["context", "question"], template=prompt_template)
 
     memory = ConversationBufferMemory(input_key="question", memory_key="history")
